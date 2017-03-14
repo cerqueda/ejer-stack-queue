@@ -1,12 +1,34 @@
-var nombres = [];
+var nombreCompleto= [];
 
+function Pila(){
 
-var nombre= newStack(0,1);
-function Stack(){
-nombres.push ("luna");
-nombres.push("totoro");
-nombres.push ("ponyo");
-nombres.push ("sabrina");
-nombres.push ("goku");
+  var nombres =[];
+  this.push = function(datos){
+    return nombres.push(datos);
+  };
+  this.pop = function (){
+    return nombres.pop();
+  };
+  this.print = function (){
+    document.write (nombres.toString());
+  };
 }
-console.log(Stack.getLength()); // 3
+var pilaNombre = new Pila();
+pilaNombre.push("Luna");
+pilaNombre.push("Sabrina");
+pilaNombre.push("Akane");
+pilaNombre.push("Gema");
+pilaNombre.push("Koru");
+
+var pilaApellido = new Pila();
+pilaApellido.push("Sanchez");
+pilaApellido.push("Cerqueda");
+pilaApellido.push("Calderón");
+pilaApellido.push("Guerra");
+pilaApellido.push("López");
+
+var concatenar = new Pila;
+for (i=0; i<5; i++){
+  concatenar = pilaNombre.pop()+" "+ pilaApellido.pop();
+  document.write (concatenar);
+}
